@@ -12,7 +12,28 @@ Uses an email template with placeholders to generate personalized emails.
 Groups email addresses by school and formats them accordingly.
 Saves the generated emails to a Word document.
 
-Dependencies
+Input File Preparation 
+    This code needs the email template and the list of school with emails, see STEM Teacher Research (MIDDLE).csv
+
+Environment Setup
+1. Install Visual Studio Code 
+2. Create Github account
+3. Sign into Github on Visual Studio Code
+4. Download stempathize code from https://github.com/tr1sha-t/stempathize 
+5. Move into /user/<username> e.g. /user/trisha-t
+6. Ensure you have the following key files 
+        stempathize_send_emails.py
+        input/STEM Teacher Research (MIDDLE).csv
+        README.md (this file)
+
+7. Install brew 
+8. Add brew to your PATH
+9. Install Python
+10. Add python to your PATH
+11. Install/Update pip 
+12. Run code
+
+Dependencies (for this specific code)
 
 The script requires the following Python libraries:
 
