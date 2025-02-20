@@ -40,15 +40,11 @@ def generate_emails_from_csv(file_path, email_template, sender_name, program_nam
 def save_emails_to_docx(emails, output_file):
     # Create a new Word document
     document = Document()
-    #document.add_heading("Generated Emails", level=1)
 
     for email in emails:
-        #document.add_heading(f"Email for {email['to']}", level=2)
-        #document.add_paragraph(f"From: {email['from']}")
         document.add_paragraph(f"To: {email['to']}")
         document.add_paragraph(f"Subject: {email['subject']}")
         document.add_paragraph(f"{email['body']}")
-        #document.add_paragraph("-" * 50)  # Separator
 
     # Save the document
     document.save(output_file)
@@ -61,11 +57,10 @@ email_template = {
 }
 
 # Parameters
-#file_path = '/Users/susmitanayak/Downloads/STEM Teacher Research (MIDDLE) - Trisha T.csv'  # Path to the uploaded CSV file
-file_path = '/Users/susmitanayak/Downloads/STEM Teacher Research (MIDDLE) - Sheet21.csv'  # Path to the uploaded CSV file
+file_path = 'input/STEM Teacher Research (MIDDLE).csv'  # Path to the uploaded CSV file
 sender_name = "Trisha Thyagarajan"
 program_name = "Saturday Workshop Series"
-output_file = "/Users/susmitanayak/Downloads/Generated_Emails - Sheet21.docx"  # Output file path
+output_file = "Generated_Emails.docx"  # Output file path
 
 # Generate emails
 emails = generate_emails_from_csv(file_path, email_template, sender_name, program_name)
